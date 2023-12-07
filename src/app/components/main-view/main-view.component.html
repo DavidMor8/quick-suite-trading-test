@@ -1,0 +1,54 @@
+<div class="movies-container">
+    <h2>NETMOOVIES</h2>
+    <div class="button-bar">
+        <div class="filter-bar">
+            <div class="sort-by">
+                <input  class="name-place-holder" type="text" [(ngModel)]="searchTerm" placeholder="Search by Name" (keyup)="searchMovies()">
+                <button class="just-text" (click)="sortMoviesByTitle()">Sort by title</button>
+                <button class="just-text" (click)="sortMoviesByReleaseDate()">Sort by release date</button>
+                <button class="just-text clear" (click)="clearSearch()">Clear</button>
+            </div>
+            <div class="later">
+                <div class="bottom-bar-menu">
+                    <button class="show-menu-button" (click)="toggleLastThreeAddedMenu()">Watch Later</button> 
+                    <div class="menu-container">
+                        <div class="menu" *ngIf="showLastThreeAddedMenu">
+                            <div class="title-close-container">
+                                <button class="close-button" id="close-icon" (click)="closeLastThreeAddedMenu()">X</button> 
+                                <h1>Recently added</h1>
+                            </div>
+                        <div *ngIf="lastThreeAddedMovies.length > 0">
+                            <div *ngFor="let movie of lastThreeAddedMovies" class="three-container">
+                                <img [src]="movie.image" class="img-drop" alt=" Image">
+                                <a [routerLink]="['/watch-later', movie.id]">{{ movie.title }}</a>
+                            </div>
+                            <button class="show-button" (click)="showAllWatchlistMovies()">Show More</button>
+                        </div>
+                        <div *ngIf="lastThreeAddedMovies.length <= 0">
+                            No moovies added to watchlist
+                        </div>
+                        </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+   
+    <div class="movie-list-container">
+        <div class="movies" *ngFor="let movie of filteredMovies">
+            <div (click)="redirectToMovieDetails(movie)" style="cursor: pointer;"></div>
+            <div (click)="redirectToMovieDetails(movie)" style="cursor: pointer;">
+                
+            <img [src]="movie.image" alt=" Image">
+            <p class="movie-title">{{movie.title}}</p>
+            <p class="movie-date">{{movie.releasedDate}}</p>
+            </div>
+            <button class="added-button" *ngIf="!movie.addedToWatchlist" (click)="addToWatchlist(movie)"> + Add to my Watchlist</button> 
+            <button class="added-button" *ngIf="movie.addedToWatchlist" (click)="removeFromWatchlist(movie)"> Remove from</button>
+        </div>
+    </div>
+     
+</div>
+
+ 
+   

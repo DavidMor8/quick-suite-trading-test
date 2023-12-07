@@ -1,0 +1,19 @@
+<div id="movie-details">
+  <div class="movie-container">
+    <div *ngFor="let movie of allWatchlistMovies" class="movie-card">
+      <h3>{{ movie.title }}</h3>
+       <div *ngIf="movie.youtubeId" class="trailer">
+          <iframe [src]="getSafeUrl('https://www.youtube.com/embed/' + movie.youtubeId)" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="additional-info">
+          <div class="movie-info">
+            <p>{{ movie.description }}</p>
+            <p>Rating:{{ movie.rating }}</p>
+            <p>Genre:{{ movie.genre }}</p>
+            <p>{{ movie.duration }}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+  

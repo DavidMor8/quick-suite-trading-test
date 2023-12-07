@@ -1,0 +1,48 @@
+*{
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+   /* body{
+    padding: 0!important;
+    margin:0!important;
+   } */
+
+   #movie-details {
+    background-color: #1e1e1e; /* Color de fondo más oscuro */
+    min-height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; */
+  }
+ 
+
+   #movie-details {
+    text-align: center;
+  }
+  
+  h3 {
+    margin-bottom: 20px;
+  }
+  
+  .details-container {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+  }
+  
+  
+  .trailer {
+    margin-top: 20px;
+  }
+  
+  .additional-info {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 20px; /* Espacio entre el trailer y la información */
+  }
+  
