@@ -1,48 +1,63 @@
 *{
-    color:white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-   /* body{
-    padding: 0!important;
-    margin:0!important;
-   } */
+.title-container{
+  text-align: center;
+  padding-top: 50px;
+  color:white;
+  font-size: 20px;
+}
 
-   #movie-details {
-    background-color: #1e1e1e; /* Color de fondo más oscuro */
+#movie-details {
+    background-color: #1e1e1e; 
     min-height: 100vh;
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; */
+    padding: 20px;
   }
- 
+  
 
-   #movie-details {
+  .movie-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  .movie-card {
+    background-color: #2d2d2d; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: white; 
+    padding: 15px;
     text-align: center;
   }
   
-  h3 {
-    margin-bottom: 20px;
-  }
-  
-  .details-container {
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
+  .movie-card h3 {
+    margin-top: 0;
   }
   
   
   .trailer {
-    margin-top: 20px;
+    margin-bottom: 15px;
   }
   
+  .trailer iframe {
+    width: 100%;
+    height: 15vw;
+    border: none;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
   .additional-info {
-    margin-top: 20px;
-    text-align: left;
-    margin-left: 20px; /* Espacio entre el trailer y la información */
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .movie-info {
+    color: #ccc; 
   }
   

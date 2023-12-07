@@ -7,16 +7,22 @@
   clear: both;
 }
 
+
 .movies-container {
   background-color:rgb(46, 45, 45); 
   overflow: auto;
   min-height: 800px;
   padding: 20px;
   margin: 0;
+  text-align: center;
+  padding-top: 50px;
+  text-align: center;
+  padding-top: 50px;
+  color:white;
+  font-size: 20px;
 }
 
 .button-bar{
-  /* width: 1279px; */
   align-items: center;
   padding-bottom: 15px;
   padding-top: 25px;
@@ -25,7 +31,6 @@
 
 .sort-by{
   display: flex;
-  /* width:955px; */
 }
 
 .filter-bar{

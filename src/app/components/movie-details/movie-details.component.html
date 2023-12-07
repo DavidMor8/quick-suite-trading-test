@@ -1,35 +1,23 @@
-<!-- <div *ngIf="movie">
-    <h2>{{ movie.title }}</h2>
-    <img [src]="movie.image" alt="{{ movie.title }} Image">
-  
-    <p>{{ movie.description }}</p>
-    <p>{{ movie.rating }}</p>
-    <p>{{ movie.genre }}</p>
-    <p>{{ movie.duration}}</p>
-    <a *ngIf="movie.trailerLink" [href]="movie.trailerLink" target="_blank">Watch Trailer</a>
-    
-  
-  </div> -->
-  
+<div class="title-container">
+  <h1>MOVIE DETAILS</h1>
+</div>
 <div id="movie-details">
-  <div id="movie-details" *ngIf =movie>
-    <h3>{{ movie.title }}</h3>
-    <div class="details-container" >
-     
-    
+  
+  <div class="movie-container" *ngIf = "movie">
+    <div class="movie-card">
+        <h3>{{ movie.title }}</h3>
         <div *ngIf="movie" class="trailer">
-      
-          <iframe *ngIf="youtubeUrl" [src]="youtubeUrl" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+        <iframe *ngIf="youtubeUrl" [src]="youtubeUrl" width="400" height="200" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="additional-info">
-          <div class="movie-info">
-            <p>{{ movie.description }}</p>
-            <p>Rating:{{ movie.rating }}</p>
-            <p>Genre:{{ movie.genre }}</p>
-            <p>Duration:{{ movie.duration }}</p>
-          </div>
+      <div class="additional-info">
+        <div class="movie-info">
+          <p>{{ movie.description }}</p>
+          <p>Rating:{{ movie.rating }}</p>
+          <p>Genre:{{ movie.genre }}</p>
+          <p>{{ movie.duration }}</p>
         </div>
       </div>
-  
   </div>
 </div>
+
+  
